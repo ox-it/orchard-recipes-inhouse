@@ -65,5 +65,9 @@
         </dict>
       </dict>
     </array>
+    <key>requires</key>
+    <array>
+      <string>outset</string>
+    </array>
   </dict>
 </plist>

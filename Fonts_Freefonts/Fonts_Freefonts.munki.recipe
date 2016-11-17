@@ -36,7 +36,7 @@
         <key>category</key>
         <string>System Software</string>
         <key>description</key>
-        <string>Deploys fonts included in payload, here freeware or free licensed.</string> 
+        <string>Deploys fonts included in payload, here freeware or free licensed.</string>
         <key>developer</key>
         <string>Oxford University</string>
         <key>display_name</key>

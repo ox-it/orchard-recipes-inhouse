@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple/DTD PLIST 1.0//EN" "http://apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -36,11 +35,13 @@
         <key>category</key>
         <string>System Software</string>
         <key>description</key>
-        <string>Deploys fonts included in payload, here freeware or free licensed.</string>
+        <string>Deploys a selection of freeware/free licensed fonts.</string>
         <key>developer</key>
         <string>Oxford University</string>
         <key>display_name</key>
         <string>Fonts Freefonts</string>
+        <key>icon_name</key>
+        <string>Fonts.png</string>
         <key>name</key>
         <string>%NAME%</string>
         <key>unattended_install</key>

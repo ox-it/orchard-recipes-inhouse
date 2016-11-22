@@ -11,13 +11,13 @@
         <key>Name</key>
         <string>Christopher Beard</string>
         <key>Email</key>
-        <string>christopher.beard(at)it.ox.ac.uk</string>
+        <string>christopher.beard at it.ox.ac.uk</string>
         <key>Github</key>
         <string>cdbeard</string>
       </dict>
     </dict>
     <key>Description</key>
-    <string>Packages contents of 'Payload' dir and imports into munki.</string>
+    <string>Packages a selection of freeware/free licensed fonts and imports into munki.</string>
     <key>Identifier</key>
     <string>uk.ac.ox.orchard.munki.Fonts_Freefonts</string>
     <key>Input</key>
@@ -35,7 +35,7 @@
         <key>category</key>
         <string>System Software</string>
         <key>description</key>
-        <string>Deploys a selection of freeware/free licensed fonts.</string>
+        <string>A selection of freeware/free licensed fonts.</string>
         <key>developer</key>
         <string>Oxford University</string>
         <key>display_name</key>

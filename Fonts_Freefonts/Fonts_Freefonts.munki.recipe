@@ -46,7 +46,7 @@
         <string>%NAME%</string>
         <key>postinstall_script</key>
         <string>#!/bin/sh
-rm -rf /Library/Fonts/MMP-Fonts
+rm -rf /Library/Fonts/MMP-Freefonts
         </string>
         <key>unattended_install</key>
         <true/>

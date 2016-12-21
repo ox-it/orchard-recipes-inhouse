@@ -44,10 +44,6 @@
         <string>Fonts.png</string>
         <key>name</key>
         <string>%NAME%</string>
-        <key>postinstall_script</key>
-        <string>#!/bin/sh
-rm -rf /Library/Fonts/MMP-Freefonts
-        </string>
         <key>unattended_install</key>
         <true/>
       </dict>

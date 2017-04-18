@@ -1,0 +1,15 @@
+Fonts_Freefonts README
+
+These fonts are licensed to the Development Office.
+For more information see https://docs.orchard.ox.ac.uk/Software/Fonts_Oxford_Development_Office
+
+To update the font package with new fonts:
+
+1. git pull to a test Mac with autopkg and nunki installed (in VM ideally)
+2. Update the font files in /payload
+3. Update the version in the .pkg recipe to today's date
+4. 'autopkg run' the .munki recipe 
+5. check the package validity eg. in Suspicious Package.
+6. git commit and push the updated pkg recipe and /payload
+7. git pull to munki build host
+8. 'autopkg run' the .munki recipe to build and import the updated package to munki

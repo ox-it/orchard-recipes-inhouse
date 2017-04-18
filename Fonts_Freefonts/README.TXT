@@ -1,7 +1,6 @@
 Fonts_Freefonts README
 
-These fonts are licensed to the Development Office.
-For more information see https://docs.orchard.ox.ac.uk/Software/Fonts_Oxford_Development_Office
+These fonts are foss/freeware. For more information see https://docs.orchard.ox.ac.uk/Software/Fonts_Freefonts
 
 To update the font package with new fonts:
 

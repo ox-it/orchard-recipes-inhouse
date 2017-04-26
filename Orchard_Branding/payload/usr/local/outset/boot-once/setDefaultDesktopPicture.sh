@@ -40,7 +40,7 @@ case $OS_VERSION in
     applyOrchardDesktop 'El Capitan.jpg'
     ;;
   *)
-    echo "ERROR: Unsupported Mac OS X version."
+    echo "ERROR: Unsupported macOS version."
     exit 1
     ;;
 esac

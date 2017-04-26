@@ -25,8 +25,8 @@ LADMIN_PICTURE='/Library/Orchard/Artwork/User_Pictures/ladmin_user_picture.png'
 function applyUserPicture {
   local SHORTNAME=$1
   local PICTURE=$2
-  local EXISTING_PICTURE=""
   echo "INFO: Applying user picture to account '${SHORTNAME}':"
+  # Test first if user exists
   if ( dscl . -read /Users/${SHORTNAME} >/dev/null 2>&1 ); then
     # Remove any existing picture
     dscl . delete /Users/${SHORTNAME} jpegphoto

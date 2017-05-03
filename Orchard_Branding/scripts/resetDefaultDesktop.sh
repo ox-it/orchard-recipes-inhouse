@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Undoes the changes made by script payload/usr/local/boot-once/setDefaultDesktopPicture.sh
-# For inclusion in post-install of Orchard_Branding package.
+# For inclusion in pkginfo postuninstall_script key of Orchard_Branding package.
 #
 # Copyright (C) 2017 Oxford University
 #    Christopher Beard christopher.beard(at)it.ox.ac.uk>

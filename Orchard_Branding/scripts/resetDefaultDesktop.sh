@@ -14,7 +14,6 @@
 ################################################################################!/bin/bash
 
 OS_DESKTOPS='/Library/Desktop Pictures'
-ORCHARD_DESKTOP='/Library/Orchard/Artwork/Desktop_Pictures/Oxford-Crest-Centre.jpg'
 OS_VERSION=$(sw_vers -productVersion | /usr/bin/awk -F'.' '{ print $2 }') || { echo "Could not extract OS version."; exit 1; }
 
 function restoreDefaultDesktop {

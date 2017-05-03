@@ -22,10 +22,10 @@ function applyOrchardDesktop {
   # Stop if the default file is already a symlink
   [ -h "${OS_DESKTOPS}/${OS_DEFAULT}" ] && { echo "Default desktop file '${OS_DESKTOPS}/${OS_DEFAULT}' is already a symlink, exiting."; exit 1; }
 
-  echo "Renaming ${OS_DESKTOPS}/${OS_DEFAULT} to 'Default - ${OS_DEFAULT}'"
+  echo "Renaming '${OS_DESKTOPS}/${OS_DEFAULT}' to 'Default - ${OS_DEFAULT}'"
   mv "${OS_DESKTOPS}/${OS_DEFAULT}" "${OS_DESKTOPS}/Default - ${OS_DEFAULT}"
 
-  echo "Creating symlink ${OS_DESKTOPS}/${OS_DEFAULT} to ${ORCHARD_DESKTOP}"
+  echo "Creating symlink '${OS_DESKTOPS}/${OS_DEFAULT}' to '${ORCHARD_DESKTOP}'"
   ln -s "${ORCHARD_DESKTOP}" "${OS_DESKTOPS}/${OS_DEFAULT}"
 }
 

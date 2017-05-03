@@ -15,6 +15,7 @@
 
 OS_DESKTOPS='/Library/Desktop Pictures'
 ORCHARD_DESKTOP='/Library/Orchard/Artwork/Desktop_Pictures/Oxford-Crest-Centre.jpg'
+OS_VERSION=$(sw_vers -productVersion | /usr/bin/awk -F'.' '{ print $2 }') || { echo "Could not extract OS version."; exit 1; }
 
 function restoreDefaultDesktop {
   local OS_DEFAULT=$1  
@@ -22,7 +23,7 @@ function restoreDefaultDesktop {
   # Stop if the dfault file is not a symlink
   [ ! -h "${OS_DESKTOPS}/${OS_DEFAULT}" ] && { echo "ERROR: Default desktop file '${OS_DESKTOPS}/${OS_DEFAULT}' is not a symlink, exiting."; exit 1; }
 
-  echo "Removing symlink ${OS_DESKTOPS}/${OS_DEFAULT} to ${ORCHARD_DESKTOP}"
+  echo "Removing symlink '${OS_DESKTOPS}/${OS_DEFAULT}' to '${ORCHARD_DESKTOP}'"
   rm "${OS_DESKTOPS}/${OS_DEFAULT}"
 
   echo "Renaming 'Default - ${OS_DEFAULT}' back to ${OS_DESKTOPS}/${OS_DEFAULT}" 

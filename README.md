@@ -19,4 +19,4 @@ The pkg gets a manually-updated version number, we're using the date in `yyyymmd
 
 `Orchard_Branding.munki.recipe` - AutoPkg recipe to run the .pkg.recipe and import the package to a munki repo. 
 - Includes a 'requires' dependency for outset. 
-- pkginfo includes a post-uninstall script  `resetDefaultDesktop-postuninstall_script.sh` which undoes the outset script `setDefaultDesktopPicture.sh`. 
+- pkginfo includes a post-uninstall script which undoes the outset script `setDefaultDesktopPicture.sh`. The code can be found in `scripts/resetDefaultDesktop-postuninstall_script.sh`.

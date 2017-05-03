@@ -14,6 +14,7 @@
 ###############################################################################
 OS_DESKTOPS='/Library/Desktop Pictures'
 ORCHARD_DESKTOP='/Library/Orchard/Artwork/Desktop_Pictures/Oxford-Crest-Centre.jpg'
+OS_VERSION=$(sw_vers -productVersion | /usr/bin/awk -F'.' '{ print $2 }') || { echo "Could not extract OS version."; exit 1; }
 
 function applyOrchardDesktop {
   local OS_DEFAULT=$1
@@ -21,14 +22,12 @@ function applyOrchardDesktop {
   # Stop if the default file is already a symlink
   [ -h "${OS_DESKTOPS}/${OS_DEFAULT}" ] && { echo "Default desktop file '${OS_DESKTOPS}/${OS_DEFAULT}' is already a symlink, exiting."; exit 1; }
 
-  echo "Renaming ${OS_DESKTOPS}/${OS_DEFAULT} to 'Default - ${OS_DEFAULT}'"
+  echo "Renaming '${OS_DESKTOPS}/${OS_DEFAULT}' to 'Default - ${OS_DEFAULT}'"
   mv "${OS_DESKTOPS}/${OS_DEFAULT}" "${OS_DESKTOPS}/Default - ${OS_DEFAULT}"
 
-  echo "Creating symlink ${OS_DESKTOPS}/${OS_DEFAULT} to ${ORCHARD_DESKTOP}"
+  echo "Creating symlink '${OS_DESKTOPS}/${OS_DEFAULT}' to '${ORCHARD_DESKTOP}'"
   ln -s "${ORCHARD_DESKTOP}" "${OS_DESKTOPS}/${OS_DEFAULT}"
 }
-
-OS_VERSION=$(sw_vers -productVersion | /usr/bin/awk -F'.' '{ print $2 }') || { echo "Could not extract OS version."; exit 1; }
 
 case $OS_VERSION in
   10)
@@ -38,6 +37,10 @@ case $OS_VERSION in
   11)
     echo "OS X 10.11 detected."
     applyOrchardDesktop 'El Capitan.jpg'
+    ;;
+  12)
+    echo "macOS 10.12 detected."
+    applyOrchardDesktop 'Sierra.jpg'  
     ;;
   *)
     echo "ERROR: Unsupported macOS version."

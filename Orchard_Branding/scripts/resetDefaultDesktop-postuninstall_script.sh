@@ -19,8 +19,8 @@ OS_VERSION=$(sw_vers -productVersion | /usr/bin/awk -F'.' '{ print $2 }') || { e
 function restoreDefaultDesktop {
   local OS_DEFAULT=$1  
 
-  # Stop if the dfault file is not a symlink
-  [ ! -h "${OS_DESKTOPS}/${OS_DEFAULT}" ] && { echo "ERROR: Default desktop file '${OS_DESKTOPS}/${OS_DEFAULT}' is not a symlink, exiting."; exit 1; }
+  # Stop if the default file is not a symlink
+  [ ! -h "${OS_DESKTOPS}/${OS_DEFAULT}" ] &amp;&amp; { echo "ERROR: Default desktop file '${OS_DESKTOPS}/${OS_DEFAULT}' is not a symlink, exiting."; exit 1; }
 
   echo "Removing symlink '${OS_DESKTOPS}/${OS_DEFAULT}' to '${ORCHARD_DESKTOP}'"
   rm "${OS_DESKTOPS}/${OS_DEFAULT}"

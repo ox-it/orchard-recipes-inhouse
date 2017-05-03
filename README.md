@@ -11,6 +11,11 @@ Fonts to be packaged should be placed in `<RECIPE-DIR>/payload/Library/Fonts` an
 
 We use [outset](https://github.com/chilcote/outset) in Orchard to run scripts at boot, including some to apply branding graphics like desktops and user pictures. (outset can also run scripts at login and more. Graham Gilbert has an [AutoPkg recipe](https://github.com/grahamgilbert/autopkg-recipes/tree/master/outset) for outset.) 
 
-`Orchard_Branding.pkg.recipe` - This is an AutoPkg recipe to package custom Desktop Pictures and User Pictures (i.e. account icons), with the correct permissions for them to be able to be moved into the local Library. In the payload we also include outset scripts to apply the graphics; they run at boot to run with root privileges. The pkg gets a manually-updated version number, we're using the date in `yyyymmdd`.
+`Orchard_Branding.pkg.recipe` - This is an AutoPkg recipe to package the following:
+- custom Desktop Pictures and User Pictures (i.e. account icons), with the correct permissions for them to be able to be moved into the local Library. 
+- scripts run by outset at boot to apply the graphics: `setDefaultDesktopPicture.sh` (boot-once), `applyManagementAccountUserPictures.sh` (boot-every). 
+The pkg gets a manually-updated version number, we're using the date in `yyyymmdd`.
 
-`Orchard_Branding.munki.recipe` - AutoPkg recipe to run the .pkg.recipe and import the package to a munki repo. Includes a 'requires' dependency for outset.
+`Orchard_Branding.munki.recipe` - AutoPkg recipe to run the .pkg.recipe and import the package to a munki repo. 
+- Includes a 'requires' dependency for outset. 
+- pkginfo includes a post-uninstall script  `resetDefaultDesktop-postuninstall_script.sh` which undoes the outset script `setDefaultDesktopPicture.sh`. 

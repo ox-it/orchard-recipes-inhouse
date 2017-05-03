@@ -14,8 +14,8 @@ We use [outset](https://github.com/chilcote/outset) in Orchard to run scripts at
 `Orchard_Branding.pkg.recipe` - This is an AutoPkg recipe to package the following:
 - custom Desktop Pictures and User Pictures (i.e. account icons), with the correct permissions for them to be able to be moved into the local Library. 
 - scripts run by outset at boot to apply the graphics: `setDefaultDesktopPicture.sh` (boot-once), `applyManagementAccountUserPictures.sh` (boot-every). 
-
 The pkg gets a manually-updated version number, we're using the date in `yyyymmdd`.
-The munki pkginfo includes a post-uninstall script  `resetDefaultDesktop-postuninstall_script.sh` which undoes the outset script `setDefaultDesktopPicture.sh`. 
 
-`Orchard_Branding.munki.recipe` - AutoPkg recipe to run the .pkg.recipe and import the package to a munki repo. Includes a 'requires' dependency for outset.
+`Orchard_Branding.munki.recipe` - AutoPkg recipe to run the .pkg.recipe and import the package to a munki repo. 
+- Includes a 'requires' dependency for outset. 
+- pkginfo includes a post-uninstall script  `resetDefaultDesktop-postuninstall_script.sh` which undoes the outset script `setDefaultDesktopPicture.sh`. 

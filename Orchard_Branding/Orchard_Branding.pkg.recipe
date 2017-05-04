@@ -11,7 +11,7 @@
       <key>NAME</key>
       <string>Orchard_Branding</string>
       <key>VERSION</key>
-      <string>20170503</string>
+      <string>20170504</string>
       <key>PKG_ID</key>
       <string>uk.ac.ox.orchard.pkg.OrchardBranding</string>
     </dict>

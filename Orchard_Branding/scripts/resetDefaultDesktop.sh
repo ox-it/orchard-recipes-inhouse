@@ -14,18 +14,18 @@
 ################################################################################!/bin/bash
 
 OS_DESKTOPS='/Library/Desktop Pictures'
-OS_VERSION=$(sw_vers -productVersion | /usr/bin/awk -F'.' '{ print $2 }') || { echo "Could not extract OS version."; exit 1; }
+OS_VERSION=$(sw_vers -productVersion | /usr/bin/awk -F'.' '{ print $2 }') || { echo "Could not extract OS version."; exit 1; }1
 
 function restoreDefaultDesktop {
-  local OS_DEFAULT=$1  
+  local OS_DEFAULT=$1
 
   # Stop if the dfault file is not a symlink
   [ ! -h "${OS_DESKTOPS}/${OS_DEFAULT}" ] && { echo "ERROR: Default desktop file '${OS_DESKTOPS}/${OS_DEFAULT}' is not a symlink, exiting."; exit 1; }
 
-  echo "Removing symlink '${OS_DESKTOPS}/${OS_DEFAULT}' to '${ORCHARD_DESKTOP}'"
+  echo "Removing symlink '${OS_DESKTOPS}/${OS_DEFAULT}'"
   rm "${OS_DESKTOPS}/${OS_DEFAULT}"
 
-  echo "Renaming 'Default - ${OS_DEFAULT}' back to ${OS_DESKTOPS}/${OS_DEFAULT}" 
+  echo "Renaming '${OS_DESKTOPS}/Default - ${OS_DEFAULT}' back to '${OS_DEFAULT}'"
   mv "${OS_DESKTOPS}/Default - ${OS_DEFAULT}" "${OS_DESKTOPS}/${OS_DEFAULT}"
 }
 
@@ -37,9 +37,9 @@ case $OS_VERSION in
   11)
     echo "OS X 10.11 detected."
     restoreDefaultDesktop 'El Capitan.jpg'
-    ;; 
+    ;;
   12)
-    echo "macOS 10.12 detected." 
+    echo "macOS 10.12 detected."
     restoreDefaultDesktop 'Sierra.jpg'
     ;;
   *)

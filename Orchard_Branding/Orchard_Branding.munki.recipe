@@ -35,7 +35,7 @@
         <key>category</key>
         <string>System Software</string>
         <key>description</key>
-        <string>Deploys Orchard branding files (desktops, user pictures, login icons) to /Library/Orchard.</string>
+        <string>Deploys Orchard branding files (desktops, user pictures) and outset scripts to apply them.</string>
         <key>developer</key>
         <string>Oxford University</string>
         <key>display_name</key>

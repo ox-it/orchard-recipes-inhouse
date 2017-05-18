@@ -20,9 +20,6 @@ BREADCRUMB="/Library/Orchard/desktopPictureChanged"
 function applyOrchardDesktop {
   local OS_DEFAULT=$1
 
-  # Stop if the default file is already a symlink
-  [ -h "${OS_DESKTOPS}/${OS_DEFAULT}" ] && { echo "Default desktop file '${OS_DESKTOPS}/${OS_DEFAULT}' is already a symlink, exiting."; exit 1; }
-
   echo "Renaming '${OS_DESKTOPS}/${OS_DEFAULT}' to 'Default - ${OS_DEFAULT}'"
   mv "${OS_DESKTOPS}/${OS_DEFAULT}" "${OS_DESKTOPS}/Default - ${OS_DEFAULT}"
 

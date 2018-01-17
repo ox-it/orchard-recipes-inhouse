@@ -1,10 +1,10 @@
-Fonts_Freefonts README
+Fonts_Freefonts HOW-TO-UPDATE
 
 These fonts are foss/freeware. For more information see https://docs.orchard.ox.ac.uk/Software/Fonts_Freefonts
 
 To update the font package with new fonts:
 
-1. git pull to a test Mac with autopkg and nunki installed (in VM ideally)
+1. git pull to a test Mac with autopkg and munki installed (in VM ideally)
 2. Update the font files in /payload
 3. Update the version in the .pkg recipe to today's date
 4. 'autopkg run' the .munki recipe 

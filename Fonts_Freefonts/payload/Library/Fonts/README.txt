@@ -15,11 +15,12 @@ other freeware fonts.
    http://www.fontsquirrel.com/fonts/download/cousine
  * Hadrian Regular
    http://www.fontpalace.com/font-download/Hadrian+Regular/
+ * Lato:
+   http://www.latofonts.com/lato-free-fonts/
  * Liberation fonts:
    https://fedorahosted.org/liberation-fonts/
  * Roboto:
    http://developer.android.com/design/style/typography.html
  * Source Sans Pro:
    http://sourceforge.net/adobe/sourcesans/wiki/Home/
-
 

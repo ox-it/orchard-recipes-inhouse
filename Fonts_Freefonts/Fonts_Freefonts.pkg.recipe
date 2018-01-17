@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Creates a pkg in ./build of the fonts in ./payload</string>
     <key>Identifier</key>
-    <string>uk.ac.ox.orchard.pkg.FontsFreefonts</string>
+    <string>uk.ac.ox.orchard.pkg.Fonts_Freefonts</string>
     <key>Input</key>
     <dict>
       <key>NAME</key>

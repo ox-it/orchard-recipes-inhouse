@@ -23,7 +23,7 @@ The pkg gets a manually-updated version number, we're using the date in `yyyymmd
 
 ## outset_packages
 
-munkipkg projects for building packages used in Orchard.
+munkipkg projects for building packages to deploy outset scripts.
 
 - outsetLoginOnceFinderDefaults
 - outsetLoginOnceFinderDefaultsShowExternalMedia

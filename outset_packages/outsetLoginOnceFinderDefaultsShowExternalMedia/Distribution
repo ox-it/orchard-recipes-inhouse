@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<installer-script minSpecVersion="1.000000" authoringTool="com.jamfsoftware.Composer" authoringToolVersion="8.4" authoringToolBuild="1">
+  <title>outsetLoginOnceFinderDefaultsShowExternalMedia</title>
+  <options customize="never" allow-external-scripts="no"/>
+  <domains enable_anywhere="true"/>
+  <choices-outline>
+    <line choice="payload"/>
+  </choices-outline>
+  <choice id="payload" title="outsetLoginOnceFinderDefaultsShowExternalMedia">
+    <pkg-ref id="outsetloginoncefinderdefaultsshowexternalmedia.payload.pkg"/>
+  </choice>
+  <pkg-ref id="outsetloginoncefinderdefaultsshowexternalmedia.payload.pkg" installKBytes="0" version="1" auth="Root">#payload.pkg</pkg-ref>
+</installer-script>

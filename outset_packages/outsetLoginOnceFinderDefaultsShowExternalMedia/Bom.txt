@@ -1,0 +1,6 @@
+.	40775	0/80
+./usr	40755	0/0
+./usr/local	40755	0/0
+./usr/local/outset	40755	0/0
+./usr/local/outset/login-once	40755	0/0
+./usr/local/outset/login-once/outsetFinderDefaultsShowExternalMedia.sh	100755	0/0	581	2182155721

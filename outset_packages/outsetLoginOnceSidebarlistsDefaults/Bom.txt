@@ -1,0 +1,6 @@
+.	40775	0/80
+./usr	40755	0/0
+./usr/local	40755	0/0
+./usr/local/outset	40755	0/0
+./usr/local/outset/login-once	40755	0/0
+./usr/local/outset/login-once/outsetSidebarlistsDefaults.sh	100755	0/0	703	24542719

@@ -1,5 +1,5 @@
 # orchard-recipes-inhouse
-In-house recipes used by the Orchard team at Oxford University for general purpose packaging
+In-house projects used by the Orchard team at Oxford University for general purpose packaging
 
 ## Fonts_Freefonts
 
@@ -20,3 +20,12 @@ The pkg gets a manually-updated version number, we're using the date in `yyyymmd
 `Orchard_Branding.munki.recipe` - AutoPkg recipe to run the .pkg.recipe and import the package to a munki repo. 
 - Includes a 'requires' dependency for outset. 
 - pkginfo includes a post-uninstall script which undoes the outset script `setDefaultDesktopPicture.sh`. The code can be found in `scripts/resetDefaultDesktop-postuninstall_script.sh`.
+
+## outset_packages
+
+munkipkg projects for building packages used in Orchard.
+
+- outsetLoginOnceFinderDefaults
+- outsetLoginOnceFinderDefaultsShowExternalMedia
+- outsetLoginOnceLocaleDefaults
+- outsetLoginOnceSidebarlistsDefaults
